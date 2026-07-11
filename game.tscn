@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bjivn1fhe3de8"]
+
+[ext_resource type="PackedScene" uid="uid://bstlhxwf02ash" path="res://ball.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://h2wc2kcfbk7l" path="res://player.tscn" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://u8nox8iac5ho" path="res://player_manager.gd" id="2_feb5d"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_mwb40"]
+
+[node name="Game" type="Node2D" unique_id=1104197853]
+
+[node name="Field" type="Sprite2D" parent="." unique_id=2009687389]
+modulate = Color(0, 0.5175928, 3.85046e-07, 1)
+position = Vector2(574.75, 324.24997)
+scale = Vector2(1150.5, 649.49994)
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="player_manager" type="Node2D" parent="." unique_id=1585733991]
+script = ExtResource("2_feb5d")
+
+[node name="Reid" parent="player_manager" unique_id=227465569 instance=ExtResource("2_e2o6t")]
+position = Vector2(437, 314)
+
+[node name="Sandra" parent="player_manager" unique_id=529482391 instance=ExtResource("2_e2o6t")]
+position = Vector2(479, 225)
+
+[node name="Gabe" parent="player_manager" unique_id=1358597437 instance=ExtResource("2_e2o6t")]
+position = Vector2(485, 416)
+
+[node name="Label" type="Label" parent="player_manager" unique_id=1076075962]
+offset_right = 304.0
+offset_bottom = 40.0
+text = "Selected Player: "
+
+[node name="ball" parent="player_manager" unique_id=1798651667 instance=ExtResource("1_80nbo")]
+position = Vector2(548, 328)

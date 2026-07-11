@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://h2wc2kcfbk7l"]
+
+[ext_resource type="Script" uid="uid://dv6d4mgtxc25i" path="res://player.gd" id="1_4flbx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sh265"]
+radius = 6.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4flbx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4flbx"]
+font_size = 8
+
+[node name="Player" type="CharacterBody2D" unique_id=529482391]
+input_pickable = true
+motion_mode = 1
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=350113806]
+shape = SubResource("CapsuleShape2D_sh265")
+
+[node name="head" type="Sprite2D" parent="." unique_id=1479884378]
+modulate = Color(0.24865592, 0.28858638, 1, 1)
+position = Vector2(0, -12.41)
+scale = Vector2(4.5, 4.5)
+texture = SubResource("CanvasTexture_4flbx")
+
+[node name="body" type="Sprite2D" parent="." unique_id=1336890465]
+modulate = Color(0.24865592, 0.28858638, 1, 1)
+position = Vector2(0, 2.3975)
+scale = Vector2(8, 23.205)
+texture = SubResource("CanvasTexture_4flbx")
+
+[node name="Label" type="Label" parent="." unique_id=657735234]
+offset_left = -8.0
+offset_top = -25.0
+offset_right = 8.0
+offset_bottom = -13.0
+text = "reid"
+label_settings = SubResource("LabelSettings_4flbx")
